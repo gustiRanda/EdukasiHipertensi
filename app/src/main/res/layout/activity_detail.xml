@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:background="@color/light_green"
+    android:padding="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/kembali_ke_menu_utama"
+            android:textColor="@color/white"
+            app:drawableStartCompat="@drawable/ic_back"
+            android:gravity="center_vertical"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/roboto"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_detail_judul"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/detail_judul_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_back"
+            tools:text="PENGERTIAN"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="24sp"
+            android:textColor="@color/black"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/detail_content_background"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_detail_judul"
+            app:layout_constraintStart_toStartOf="@+id/tv_detail_judul"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_judul">
+
+            <ImageView
+                android:id="@+id/iv_detail_foto"
+                android:layout_width="250dp"
+                android:layout_height="120dp"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tv_detail_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:textSize="18sp"
+                tools:text="Lorem ipsum dolor sit amet,
+consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut
+labore et dolore magna aliqua. Ut
+enim ad minim veniam, quis
+nostrud exercitation ullamco
+laboris nisi ut aliquip ex ea
+commodo consequat. Duis aute
+irure dolor in reprehenderit in
+voluptate velit esse cillum dolore
+eu fugiat nulla pariatur. Excepteur
+sint occaecat cupidatat non
+proident, sunt in culpa qui officia
+deserunt mollit anim id est
+laborum.Lorem ipsum dolor sit
+amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis
+nostrud exercitation ullamco
+laboris nisi ut aliquip ex ea
+commodo consequat. Duis aute
+irure dolor in reprehenderit in
+voluptate velit esse cillum dolore
+eu fugiat nulla pariatur. Excepteur
+sint occaecat cupidatat non
+proident, sunt in culpa qui officia
+deserunt mollit anim id est
+laborum.
+"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

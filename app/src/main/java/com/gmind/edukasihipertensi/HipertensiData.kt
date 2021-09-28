@@ -12,9 +12,9 @@ object HipertensiData {
         "Light Bowgun",
         "Lance",
         "Long Sword",
-        "Swith Axe")
+        "Vidio Edukasi")
 
-    private val detailData = arrayOf(
+    private val deskripsiData = arrayOf(
         "Lorem ipsum dolor sit amet, \n" +
                 "consectetur adipiscing elit, sed do \n" +
                 "eiusmod tempor incididunt ut \n" +
@@ -54,7 +54,7 @@ object HipertensiData {
         "A nimble weapon capable of extended combos.Charge up energy with each attack to use your powerful Spirit Blade. The long sword enables fast, fluid movement and combos, but it cannot be used to guard.",
         "Use the mobility and attack power of the Axe, and when you see a chance, switch to the powerful Sword. While in Sword Mode, aim to unleash a powerful Element Discharge. The switch axe morphs between axe and sword modes. Axe mode boasts power and long reach, while sword mode features faster attacks and explosive finishers. ")
 
-    private val fotoData = intArrayOf(
+    private val iconData = intArrayOf(
         R.drawable.ic_pengertian,
         R.drawable.ic_gejala,
         R.drawable.ic_penyebab,
@@ -66,15 +66,30 @@ object HipertensiData {
         R.drawable.ls,
         R.drawable.sa)
 
+    private val assetData = intArrayOf(
+            R.drawable.ic_pengertian,
+            R.drawable.ic_gejala,
+            R.drawable.ic_penyebab,
+            R.drawable.hbg,
+            R.drawable.hh,
+            R.drawable.hm,
+            R.drawable.lbg,
+            R.drawable.lc,
+            R.drawable.ls,
+            R.raw.test)
+
+
+
 
     val listData: ArrayList<Hipertensi>
         get() {
             val list = arrayListOf<Hipertensi>()
             for (position in judulData.indices) {
                 val hipertensi = Hipertensi()
-                hipertensi.judul = judulData[position]
-                hipertensi.desktripsi = detailData[position]
-                hipertensi.foto = fotoData[position]
+                hipertensi.contentJudul = judulData[position]
+                hipertensi.contentDeskripsi = deskripsiData[position]
+                hipertensi.contentIcon = iconData[position]
+                hipertensi.contentAsset = assetData[position]
                 list.add(hipertensi)
             }
             return list

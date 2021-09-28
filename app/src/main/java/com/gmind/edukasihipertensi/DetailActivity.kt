@@ -22,19 +22,17 @@ class DetailActivity : AppCompatActivity() {
         val hipertensi = intent.getParcelableExtra<Hipertensi>(EXTRA_HIPERTENSI)
 
         Glide.with(this)
-                .load(hipertensi?.foto)
+                .load(hipertensi?.contentAsset)
                 .into(activityDetailBinding.ivDetailFoto)
 
-        activityDetailBinding.tvDetailJudul.text = hipertensi?.judul
+        activityDetailBinding.tvDetailJudul.text = hipertensi?.contentJudul
 
-        activityDetailBinding.tvDetailContent.text = hipertensi?.desktripsi
+        activityDetailBinding.tvDetailContent.text = hipertensi?.contentDeskripsi
 
         activityDetailBinding.tvBack.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finishAffinity()
         }
-
-
     }
 }

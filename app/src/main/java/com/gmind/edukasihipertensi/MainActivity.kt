@@ -68,14 +68,24 @@ class MainActivity : AppCompatActivity() {
         itemList.addAll(HipertensiData.listData)
 
         rvItem.layoutManager = LinearLayoutManager(this)
-        val listItemAdapter = ListItemAdapter(itemList)
+        listItemAdapter = ListItemAdapter(itemList)
         rvItem.adapter = listItemAdapter
+        activityMainBinding.scroll?.attachRecyclerView(rvItem)
 
         listItemAdapter.setOnItemClickCallback(object : ListItemAdapter.OnItemClickCallback{
             override fun onItemClicked(hipertensi: Hipertensi) {
-                val intent = Intent(this@MainActivity, DetailActivity::class.java)
-                intent.putExtra(DetailActivity.EXTRA_HIPERTENSI, hipertensi)
-                startActivity(intent)
+                if (hipertensi.contentAsset == R.raw.test){
+
+                    val intent = Intent(this@MainActivity, DetailVideoActivity::class.java)
+                    intent.putExtra(DetailVideoActivity.EXTRA_HIPERTENSI, hipertensi)
+                    startActivity(intent)
+
+                } else {
+                    val intent = Intent(this@MainActivity, DetailActivity::class.java)
+                    intent.putExtra(DetailActivity.EXTRA_HIPERTENSI, hipertensi)
+                    startActivity(intent)
+                }
+
             }
 
         })
@@ -99,7 +109,7 @@ class MainActivity : AppCompatActivity() {
             } else {
                 dots[i].text = Html.fromHtml("&#9679")
             }
-            dots[i].textSize = 24f
+            dots[i].textSize = 18f
             activityMainBinding.dotIndicator.addView(dots[i])
         }
     }

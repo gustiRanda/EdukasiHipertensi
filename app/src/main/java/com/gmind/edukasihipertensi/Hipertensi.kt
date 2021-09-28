@@ -5,7 +5,8 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Hipertensi (
-    var judul : String = "",
-    var desktripsi : String = "",
-    var foto : Int = 0
+    var contentJudul : String = "",
+    var contentDeskripsi : String = "",
+    var contentIcon : Int = 0,
+    var contentAsset : Int = 0
 ) : Parcelable

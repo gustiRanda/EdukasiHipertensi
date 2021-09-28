@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,9 +8,7 @@
     android:background="@color/light_green"
     android:padding="20dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+
 
         <TextView
             android:id="@+id/tv_back"
@@ -42,18 +40,23 @@
             android:textColor="@color/black"/>
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/detail_content_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_detail_judul"
+        app:layout_constraintStart_toStartOf="@+id/tv_detail_judul"
+        app:layout_constraintTop_toBottomOf="@id/tv_detail_judul"
+        android:layout_marginTop="32dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/detail_content_background"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/tv_detail_judul"
-            app:layout_constraintStart_toStartOf="@+id/tv_detail_judul"
-            app:layout_constraintTop_toBottomOf="@id/tv_detail_judul">
+            >
 
             <ImageView
                 android:id="@+id/iv_detail_foto"
@@ -66,6 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
+                android:textColor="@color/grey"
                 android:textSize="18sp"
                 tools:text="Lorem ipsum dolor sit amet,
 consectetur adipiscing elit, sed do
@@ -96,12 +100,13 @@ sint occaecat cupidatat non
 proident, sunt in culpa qui officia
 deserunt mollit anim id est
 laborum.
-"/>
+" />
 
 
         </LinearLayout>
+    </ScrollView>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

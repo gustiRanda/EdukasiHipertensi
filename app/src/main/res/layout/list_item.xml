@@ -22,7 +22,7 @@
         android:layout_toEndOf="@id/iv_foto"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
-        android:textColor="@color/black"
+        android:textColor="@color/donker"
         android:fontFamily="@font/roboto_bold"
         android:textSize="24sp"/>
 

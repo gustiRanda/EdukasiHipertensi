@@ -1,27 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/iv_slider"
-        android:layout_width="200dp"
-        android:layout_height="130dp"
-        android:scaleType="centerCrop"
-        tools:src="@tools:sample/avatars"
-        android:background="@color/light_blue"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"/>
-
-    <TextView
-        android:id="@+id/tv_slider"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="text"
-        android:layout_below="@id/iv_slider"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="10dp"/>
+        android:orientation="vertical">
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/iv_slider"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/avatars"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_slider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_slider"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/roboto"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:background="@color/black"
+            tools:text="A lance equipped with the ability to fire shells. Has high attack potential thanks to Wyvern's Fire and Burst Fire, which fires all of your shells at once. The Gunlance offers more offensive power than the lance thanks to the addition of shelling attacks, and it also has good guarding capabilities. It may take time to master." />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

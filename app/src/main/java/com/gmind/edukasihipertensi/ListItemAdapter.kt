@@ -20,11 +20,12 @@ class ListItemAdapter(private val listItems: ArrayList<Hipertensi>): RecyclerVie
         private val binding = itemView
         fun bind(data: Hipertensi){
             with(binding){
+
                 Glide.with(itemView)
-                    .load(data.foto)
+                    .load(data.contentIcon)
                     .into(ivFoto)
 
-                tvJudul.text = data.judul
+                tvJudul.text = data.contentJudul
             }
         }
     }

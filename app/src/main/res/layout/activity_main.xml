@@ -10,10 +10,10 @@
 
     <LinearLayout
         android:id="@+id/frame"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="250dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/scroll"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:orientation="vertical"
         android:background="@drawable/slider_background">
@@ -51,15 +51,18 @@
         android:paddingTop="10dp"/>
 
 
+
     <com.pluscubed.recyclerfastscroll.RecyclerFastScroller
         android:id="@+id/scroll"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:rfs_barColor="#07adf4"
-        app:rfs_handlePressedColor="#df56C6" />
-
+        app:layout_constraintTop_toBottomOf="@id/frame"
+        app:rfs_barColor="@color/light_blue"
+        app:rfs_handleNormalColor="@color/light_green"
+        app:rfs_handlePressedColor="@color/light_green" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

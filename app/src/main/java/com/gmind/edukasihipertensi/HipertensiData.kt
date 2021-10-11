@@ -12,7 +12,8 @@ object HipertensiData {
         "Light Bowgun",
         "Lance",
         "Long Sword",
-        "Vidio Edukasi")
+        "Vidio Edukasi",
+        "Indeks Massa Tubuh")
 
     private val deskripsiData = arrayOf(
         "Lorem ipsum dolor sit amet, \n" +
@@ -52,7 +53,8 @@ object HipertensiData {
         "A short range projectile weapon. Utilizes a variety of ammo to do everything from rapidly shooting targets to providing support with status-changing ammo. The Bowgun can be used to attack monsters from long range. There are two types of Bowgun: the Heavy Bowgun, which  is generally slower, more powerful, and has access to high-damage ammo, and the Light Bowgun, which allows for greater mobility and evasive capabilities, and faster shooting.",
         "A weapon coupled with a highly defensive shield. Lance users can block while moving and also counter-attack. You can also charge forward with this weapon and perform a Jumping Attack. The lance is better at guarding than any other weapon. In addition to its long reach, its thrust attacks can be executed with little exposure to enemy attacks. Great for defense-oriented combat.",
         "A nimble weapon capable of extended combos.Charge up energy with each attack to use your powerful Spirit Blade. The long sword enables fast, fluid movement and combos, but it cannot be used to guard.",
-        "Use the mobility and attack power of the Axe, and when you see a chance, switch to the powerful Sword. While in Sword Mode, aim to unleash a powerful Element Discharge. The switch axe morphs between axe and sword modes. Axe mode boasts power and long reach, while sword mode features faster attacks and explosive finishers. ")
+        "Use the mobility and attack power of the Axe, and when you see a chance, switch to the powerful Sword. While in Sword Mode, aim to unleash a powerful Element Discharge. The switch axe morphs between axe and sword modes. Axe mode boasts power and long reach, while sword mode features faster attacks and explosive finishers. ",
+        "Indeks Massa Tubuh")
 
     private val iconData = intArrayOf(
         R.drawable.ic_pengertian,
@@ -64,6 +66,7 @@ object HipertensiData {
         R.drawable.lbg,
         R.drawable.lc,
         R.drawable.ls,
+        R.drawable.sa,
         R.drawable.sa)
 
     private val assetData = intArrayOf(
@@ -76,7 +79,8 @@ object HipertensiData {
             R.drawable.lbg,
             R.drawable.lc,
             R.drawable.ls,
-            R.raw.test)
+            R.raw.test,
+            R.drawable.ic_penyebab)
 
 
 

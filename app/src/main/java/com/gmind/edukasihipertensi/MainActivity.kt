@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         rvItem.layoutManager = LinearLayoutManager(this)
         listItemAdapter = ListItemAdapter(itemList)
         rvItem.adapter = listItemAdapter
-        activityMainBinding.scroll?.attachRecyclerView(rvItem)
+        activityMainBinding.scroll.attachRecyclerView(rvItem)
 
         listItemAdapter.setOnItemClickCallback(object : ListItemAdapter.OnItemClickCallback{
             override fun onItemClicked(hipertensi: Hipertensi) {
@@ -80,7 +80,10 @@ class MainActivity : AppCompatActivity() {
                     intent.putExtra(DetailVideoActivity.EXTRA_HIPERTENSI, hipertensi)
                     startActivity(intent)
 
-                } else {
+                } else if (hipertensi.contentJudul == "Indeks Massa Tubuh"){
+                    val intent = Intent(this@MainActivity, IndeksMassaTubuhActivity::class.java)
+                    startActivity(intent)
+                } else{
                     val intent = Intent(this@MainActivity, DetailActivity::class.java)
                     intent.putExtra(DetailActivity.EXTRA_HIPERTENSI, hipertensi)
                     startActivity(intent)
@@ -90,6 +93,11 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+
+        activityMainBinding.btnQuiz.setOnClickListener {
+            val intent = Intent(this, QuizActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun selectedDots(position: Int) {

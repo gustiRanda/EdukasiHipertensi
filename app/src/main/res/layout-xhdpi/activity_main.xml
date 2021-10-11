@@ -51,6 +51,16 @@
         android:paddingTop="10dp"/>
 
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hm"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
     <com.pluscubed.recyclerfastscroll.RecyclerFastScroller
         android:id="@+id/scroll"
         android:layout_width="wrap_content"

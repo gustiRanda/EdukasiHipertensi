@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EdukasiHipertensi">
-        <activity android:name=".DetailVideoActivity"></activity>
+        <activity android:name=".ResultActivity"></activity>
+        <activity android:name=".IndeksMassaTubuhActivity" />
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".DetailVideoActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DetailActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

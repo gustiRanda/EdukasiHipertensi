@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/light_green"
+    android:padding="10dp"
+    android:gravity="center"
+    tools:context=".ResultActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selamat Anda Sudah Menyesaikan Soal !!"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/black"/>
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nilai Anda"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto"
+                />
+            <TextView
+                android:id="@+id/tv_nilai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="4/5"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/btn_to_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kembali ke halaman utama"
+                android:fontFamily="@font/roboto_bold"
+                android:backgroundTint="@color/light_blue"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
